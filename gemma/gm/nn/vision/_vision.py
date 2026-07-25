@@ -50,7 +50,7 @@ def check_mask(input_data: Float["L"]) -> tuple[Bool["1"], Int["L"]]:  # pyrefly
 
   Returns:
     A boolean indicating whether the mask contains the correct number of blocks
-    and there starting positions (filled with 0 for jit compatiblity).
+    and their starting positions (filled with 0 for jit compatibility).
   """
   is_mask = input_data == TOKEN_PLACEHOLDER
   start_idx = (
