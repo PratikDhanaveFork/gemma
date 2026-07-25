@@ -152,7 +152,7 @@ class _LoRAEinsum(nn.Module):
 
   # Do not use `nn.share_scope` here as the `wrapped` module inside
   # `FeedForward` already uses `nn.share_scope`, so the two Einsum used in
-  # the `FeedForward` would colide.
+  # the `FeedForward` would collide.
   # TODO(epot): Remove this hack by updating the checkpoint loader to re-map
   # the params structure.
 
