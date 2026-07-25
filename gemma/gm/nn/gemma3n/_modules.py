@@ -101,7 +101,7 @@ class Embedder(nn.Module):
     # For models with per-layer inputs, the encoder has additional parameters:
     # * `per_layer_input_projection` and `per_layer_input_embedding_table`:
     #   The first serves to project the main input (derived either from the soft
-    #   tokens from the image encoder or the output of the main emebdding table)
+    #   tokens from the image encoder or the output of the main embedding table)
     #   into the per_layer_input space and the latter provides distinct per
     #   layer inputs for each text token. These are then merged to provide a
     #   single per_layer_input_dim input for each layer.
