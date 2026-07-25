@@ -35,7 +35,7 @@ from kauldron.utils import utils
 class SamplerEvaluator(kd.evals.EvaluatorBase):
   """Sampling evaluator.
 
-  The evaluator expects as dataset containing a `Seq2SeqTask` transform.
+  The evaluator expects a dataset containing a `Seq2SeqTask` transform.
 
   Attributes:
     cache_length: Cache length to use. This is the maximum number of tokens the
@@ -44,7 +44,7 @@ class SamplerEvaluator(kd.evals.EvaluatorBase):
     max_new_tokens: Maximum number of new tokens to generate. In total, the
       model will process `input_length + max_new_tokens`.
     pad_length: Pad length for the input. This is useful to ensure the prompt is
-      always the same length during sampling, which can be helful to avoid
+      always the same length during sampling, which can be helpful to avoid
       re-compilation.
     num_batches: Number of batches. If `None`, sample the entire dataset.
     ds: Dataset to evaluate on. Note that the dataset must be unbatched and
