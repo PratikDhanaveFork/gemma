@@ -49,7 +49,7 @@ class Interceptor(epy.ContextManager, abc.ABC):
       kwargs,
       context: nn.module.InterceptorContext,
   ):
-    """Returns the names of the methods to intercept."""
+    """Intercepts a module method call and returns its (possibly replaced) result."""
     raise NotImplementedError()
 
 
@@ -135,7 +135,7 @@ class ModuleInterceptor(Interceptor):
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class _CachedReplace:
-  # Keep a reference alived on the original module, so the
+  # Keep a reference alive on the original module, so the
   # `id(original_module)` do not get reused.
   original_module: nn.Module
   replaced_module: nn.Module
